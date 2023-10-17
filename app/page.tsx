@@ -9,5 +9,13 @@ import {
 import { useForm } from "react-hook-form";
 
 export default function Home() {
+  const form = useForm({
+    mode: "onChange",
+    defaultValues: {
+      title: "",
+      price: 29.99,
+      description: "",
+    },
+  });
   return <main className=""></main>;
 }
