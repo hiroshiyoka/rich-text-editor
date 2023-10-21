@@ -23,7 +23,7 @@ export default function Home() {
       .trim(),
   });
 
-  const form = useForm({
+  const form = useForm<z.infer<typeof formSchema>>({
     mode: "onChange",
     defaultValues: {
       title: "",
