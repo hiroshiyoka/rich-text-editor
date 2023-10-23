@@ -37,6 +37,9 @@ export default function Home() {
       description: "",
     },
   });
+
+  function onSubmit(values: z.infer<typeof formSchema>) {}
+
   return (
     <main className="p-24">
       <Form {...form}>
