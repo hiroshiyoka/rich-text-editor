@@ -13,6 +13,7 @@ import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import Tiptap from "@/components/Tiptap";
 
 export default function Home() {
   const formSchema = z.object({
@@ -63,7 +64,9 @@ export default function Home() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Description</FormLabel>
-                <FormControl></FormControl>
+                <FormControl>
+                  <Tiptap description={field.name} onChange={field.onChange} />
+                </FormControl>
                 <FormMessage />
               </FormItem>
             )}
